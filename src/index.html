@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Schmitt - Software Engineer</title>
+    <title>Max Schmitt - Member of Technical Staff</title>
     <link rel="shortcut icon" href="/favicon.png">
-    <meta property="og:title" content="Max Schmitt - Software Engineer" />
+    <meta property="og:title" content="Max Schmitt - Member of Technical Staff" />
     <meta property="og:site_name" content="Max Schmitt" />
-    <meta property="og:description" content="Open Source enthusiast, security researcher and full stack web developer." />
-    <meta property="og:image" content="images/profile.jpg" />
-    <meta name="description" content="Open Source enthusiast, security researcher and full stack web developer." />
+    <meta property="og:description" content="Member of Technical Staff at Amazon AGI. Building Nova Act. Previously 5 years on Microsoft Playwright." />
+    <meta property="og:image" content="images/sf-profile.jpg" />
+    <meta name="description" content="Member of Technical Staff at Amazon AGI. Building Nova Act. Previously 5 years on Microsoft Playwright." />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -21,6 +21,18 @@
             --secondary-color: #a3a3a3;
             --card-bg: #1a1a1a;
             --card-border: #262626;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #ffffff;
+                --text-color: #1a1a1a;
+                --accent-color: #2563eb;
+                --accent-hover: #1d4ed8;
+                --secondary-color: #6b7280;
+                --card-bg: #f5f5f5;
+                --card-border: #e5e5e5;
+            }
         }
 
         * {
@@ -86,32 +98,29 @@
 
         .profile-header-img {
             flex-shrink: 0;
+            width: 100%;
+            max-width: 320px;
         }
         .profile-header-content {
             flex: 1;
             min-width: 0; /* Allow flex item to shrink below content size */
         }
         .profile {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 16px;
             border: 2px solid var(--accent-color);
             margin-bottom: 0;
             margin-top: 0;
-        }
-        
-        @media (min-width: 768px) {
-            .profile {
-                width: 120px;
-                height: 120px;
-            }
         }
 
         .name {
             font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #fff, #a3a3a3);
+            background: linear-gradient(to right, var(--text-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             word-break: break-word; /* Prevent name from overflowing */
@@ -133,6 +142,24 @@
             .title {
                 font-size: 1.1rem;
             }
+        }
+
+        .location {
+            font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            opacity: 0.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .location-coords {
+            opacity: 0.8;
+            color: var(--secondary-color);
+        }
+
+        .location::before {
+            content: '> ';
+            color: var(--accent-color);
         }
 
         .about-text {
@@ -214,6 +241,20 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
+        @media (prefers-color-scheme: light) {
+            .location {
+                opacity: 1;
+            }
+
+            .location-coords {
+                opacity: 0.7;
+            }
+
+            .card:hover {
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            }
+        }
+
         .card h3 {
             font-size: 1.1rem;
             margin-bottom: 1rem;
@@ -293,6 +334,81 @@
             transform: translateY(-2px);
         }
 
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin-top: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--card-border);
+        }
+
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--card-border);
+            border: 2px solid var(--bg-color);
+            transform: translateX(-5px);
+        }
+
+        .timeline-entry.current::before {
+            background: var(--accent-color);
+            box-shadow: 0 0 8px var(--accent-color), 0 0 16px rgba(122, 162, 247, 0.3);
+        }
+
+        @media (prefers-color-scheme: light) {
+            .timeline-entry.current::before {
+                box-shadow: 0 0 6px var(--accent-color), 0 0 12px rgba(37, 99, 235, 0.2);
+            }
+        }
+
+        .timeline-role {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-company {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
         footer {
             text-align: center;
             padding: 2rem 0;
@@ -336,17 +452,18 @@
         <div class="container">
             <div class="profile-header">
                 <div class="profile-header-img">
-                    <img class="profile" src="images/profile.jpg" alt="Max Schmitt">
+                    <img class="profile" src="images/sf-profile.jpg" alt="Max Schmitt in San Francisco">
                 </div>
                 <div class="profile-header-content">
                     <h1 class="name">Max Schmitt</h1>
-                    <p class="title">Open Source enthusiast, security researcher, full stack web developer</p>
+                    <p class="title">Member of Technical Staff · Amazon AGI &nbsp;|&nbsp; Previously Microsoft Playwright</p>
+                    <p class="location">// currently_in: "San Francisco, CA" &nbsp; <a href="https://maps.app.goo.gl/MUW4o8k77n4QjdP28" target="_blank" rel="noopener noreferrer" class="location-coords">37.7910° N, 122.4034° W</a></p>
                     <div class="about-text">
-                        I'm a software engineer passionate about open source, security, and web development. I specialize in TypeScript, Go, Python, JavaScript, and .NET, with expertise in Git, Docker, Kubernetes, and GitHub Actions. For the past four years, I've been a core maintainer and major contributor to <a href="https://playwright.dev" target="_blank" rel="noopener noreferrer" style="font-weight:600; color:#7aa2f7;">Microsoft Playwright</a>, one of the world's leading browser automation frameworks.
+                        I'm an engineer at Amazon AGI, working on <a href="https://nova.amazon.com/act" target="_blank" rel="noopener noreferrer" style="font-weight:600;">Amazon Nova Act</a> — building AI agents for browser use. Previously, I spent 5 years as a core contributor to <a href="https://playwright.dev" target="_blank" rel="noopener noreferrer" style="font-weight:600;">Microsoft Playwright</a> across Python, .NET, Go, and the core framework. Passionate about AI agents, open source, and developer tooling.
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/mxschmitt" class="social-link" target="_blank" rel="noopener noreferrer">
-                          <svg width="20" height="20" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#fff"/></svg>
+                          <svg width="20" height="20" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor"/></svg>
                           GitHub
                         </a>
                         <a href="https://www.linkedin.com/in/max-schmitt/" class="social-link" target="_blank" rel="noopener noreferrer">
@@ -354,13 +471,31 @@
                           LinkedIn
                         </a>
                         <a href="https://x.com/mx_schmitt" class="social-link" target="_blank" rel="noopener noreferrer">
-                          <svg width="20" height="20" viewBox="0 0 300 271" xmlns="http://www.w3.org/2000/svg"><path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" fill="#fff"/></svg>
+                          <svg width="20" height="20" viewBox="0 0 300 271" xmlns="http://www.w3.org/2000/svg"><path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z" fill="currentColor"/></svg>
                           Twitter
                         </a>
                         <a href="mailto:max@schmitt.mx" class="social-link" target="_blank" rel="noopener noreferrer">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#fff"/></svg>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="currentColor"/></svg>
                           Email
                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-entry current">
+                        <div class="timeline-company">Amazon AGI — Nova Act</div>
+                        <div class="timeline-role">Member of Technical Staff</div>
+                        <div class="timeline-date">2026 — present</div>
+                        <div class="timeline-desc">Building AI agents for browser use. Working on Amazon Nova Act to enable autonomous web interaction.</div>
+                    </div>
+                    <div class="timeline-entry">
+                        <div class="timeline-company">Microsoft — Playwright</div>
+                        <div class="timeline-role">Software Engineer</div>
+                        <div class="timeline-date">2020 — 2025</div>
+                        <div class="timeline-desc">Core contributor to Playwright (75k+ stars). Developed features across Python, .NET, Go bindings, core framework, and DevOps infrastructure. Conference speaker at Microsoft Build, .NET Conf, and more.</div>
                     </div>
                 </div>
             </div>
