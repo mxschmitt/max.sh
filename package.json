@@ -1,0 +1,22 @@
+{
+  "name": "max.sh",
+  "version": "1.0.0",
+  "description": "Small site to connect to various social media profiles of mine.",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxschmitt/max.sh.git"
+  },
+  "keywords": ["portfolio", "personal-website"],
+  "author": "Max Schmitt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mxschmitt/max.sh/issues"
+  },
+  "homepage": "https://github.com/mxschmitt/max.sh#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
