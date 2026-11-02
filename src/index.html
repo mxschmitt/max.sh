@@ -8,9 +8,12 @@
     <link rel="shortcut icon" href="/favicon.png">
     <meta property="og:title" content="Max Schmitt - AI Agents, Computer Use &amp; Developer Tools" />
     <meta property="og:site_name" content="Max Schmitt" />
-    <meta property="og:description" content="Software engineer focused on AI agents, computer use, browser automation and developer tooling. Most recently at Amazon AGI; previously 5 years as a core contributor to Microsoft Playwright." />
-    <meta property="og:image" content="images/sf-profile.jpg" />
-    <meta name="description" content="Software engineer focused on AI agents, computer use, browser automation and developer tooling. Most recently at Amazon AGI; previously 5 years as a core contributor to Microsoft Playwright." />
+    <link rel="canonical" href="https://max.sh/" />
+    <meta property="og:url" content="https://max.sh/" />
+    <meta property="og:description" content="Software engineer focused on AI agents, computer use, and developer tools. Co-creator of Playwright for Python and former Microsoft Playwright engineer. Most recently at Amazon AGI." />
+    <meta property="og:image" content="https://max.sh/images/sf-profile.jpg" />
+    <meta property="og:image:alt" content="Max Schmitt in San Francisco" />
+    <meta name="description" content="Software engineer focused on AI agents, computer use, and developer tools. Co-creator of Playwright for Python and former Microsoft Playwright engineer. Most recently at Amazon AGI." />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -176,6 +179,10 @@
         .about-text {
             margin-bottom: 1.2rem;
             word-wrap: break-word; /* Ensure text wraps properly */
+        }
+
+        .about-text p + p {
+            margin-top: 0.8rem;
         }
         .social-links {
             margin-bottom: 0;
@@ -470,7 +477,8 @@
                     <p class="title">AI Agents &nbsp;·&nbsp; Computer Use &nbsp;·&nbsp; Developer Tools</p>
                     <p class="location">// currently_in: "San Francisco, CA" &nbsp; <a href="https://maps.app.goo.gl/MUW4o8k77n4QjdP28" target="_blank" rel="noopener noreferrer" class="location-coords">37.7910° N, 122.4034° W</a></p>
                     <div class="about-text">
-                        I'm a software engineer focused on AI agents, computer use, browser automation, and developer tooling. Most recently at <a href="https://nova.amazon.com/act" target="_blank" rel="noopener noreferrer" style="font-weight:600;">Amazon AGI</a>; previously spent 5 years as a core contributor to <a href="https://playwright.dev" target="_blank" rel="noopener noreferrer" style="font-weight:600;">Microsoft Playwright</a> across Python, .NET, Go, and the core framework.
+                        <p>I'm a software engineer focused on AI agents, computer use, browser automation, and developer tools. Most recently at <a href="https://nova.amazon.com/act" target="_blank" rel="noopener noreferrer" style="font-weight:600;">Amazon AGI</a>.</p>
+                        <p>Previously, I spent nearly five years building <a href="https://playwright.dev" target="_blank" rel="noopener noreferrer" style="font-weight:600;">Microsoft Playwright</a>, where I co-created <a href="https://github.com/microsoft/playwright-python" target="_blank" rel="noopener noreferrer" style="font-weight:600;">Playwright for Python</a> and worked across the core framework, .NET, Go, and developer tooling.</p>
                     </div>
                     <p class="cta">Currently exploring what's next in San Francisco. <a href="mailto:max@schmitt.mx">→ Get in touch</a></p>
                     <div class="social-links">
@@ -501,55 +509,55 @@
                         <div class="timeline-company">Amazon AGI — Nova Act</div>
                         <div class="timeline-role">Member of Technical Staff</div>
                         <div class="timeline-date">2026</div>
-                        <div class="timeline-desc">Worked on Amazon Nova Act, building AI agents for browser use. Built the computer-use recording and data infrastructure behind agent training, and the sandbox infrastructure that coding agents run in.</div>
+                        <div class="timeline-desc">Built computer-use recording and training-data infrastructure for Nova Act, plus VM sandboxes and cloud infrastructure for coding agents.</div>
                     </div>
                     <div class="timeline-entry">
                         <div class="timeline-company">Microsoft — Playwright</div>
                         <div class="timeline-role">Software Engineer</div>
-                        <div class="timeline-date">2020 — 2025</div>
-                        <div class="timeline-desc">Core contributor to Playwright (75k+ stars). Developed features across Python, .NET, Go bindings, core framework, and DevOps infrastructure. Conference speaker at Microsoft Build, .NET Conf, and more.</div>
+                        <div class="timeline-date">Nearly five years</div>
+                        <div class="timeline-desc">Co-created Playwright for Python. Worked across the core framework, .NET and Go bindings, VS Code tooling, browser infrastructure, and CI/CD. Spoke at Microsoft Build and .NET Conf.</div>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <h2 class="section-title">Recent Projects</h2>
+                <h2 class="section-title">Selected Projects</h2>
                 <div class="grid">
                     <div class="card">
                         <h3><a href="https://github.com/microsoft/playwright" target="_blank" rel="noopener noreferrer">Playwright</a></h3>
-                        <p>75k stars on GitHub: The leading end-to-end testing framework nowadays. I contributed extensively to core feature development, bug fixes, and the DevOps infrastructure (compiling browsers / automation).</p>
+                        <p>Core contributor to Microsoft's browser testing and automation framework, including features, browser builds, and developer infrastructure.</p>
+                    </div>
+                    <div class="card">
+                        <h3><a href="https://github.com/microsoft/playwright-python" target="_blank" rel="noopener noreferrer">Playwright for Python</a></h3>
+                        <p>Co-created the Python version of Playwright, bringing browser automation and testing to Python developers.</p>
                     </div>
                     <div class="card">
                         <h3><a href="https://github.com/mxschmitt/action-tmate" target="_blank" rel="noopener noreferrer">action-tmate</a></h3>
-                        <p>3k stars on GitHub: Debug your GitHub Actions via SSH by using tmate to get access to the runner system itself.</p>
-                    </div>
-                    <div class="card">
-                        <h3><a href="https://github.com/microsoft/playwright-python" target="_blank" rel="noopener noreferrer">playwright-python</a></h3>
-                        <p>13k stars on GitHub, 99M+ downloads per month: Python version of the Playwright testing and automation library.</p>
+                        <p>Created a GitHub Action for debugging workflow runs over SSH with tmate.</p>
                     </div>
                     <div class="card">
                         <h3><a href="https://github.com/playwright-community/playwright-go" target="_blank" rel="noopener noreferrer">playwright-go</a></h3>
-                        <p>2.7k stars on GitHub: Playwright for Go, a browser automation library to control Chromium, Firefox and WebKit with a single API.</p>
+                        <p>Playwright for Go: automate Chromium, Firefox, and WebKit with a single API.</p>
                     </div>
                     <div class="card">
                         <h3><a href="https://try.playwright.tech" target="_blank" rel="noopener noreferrer">Try Playwright</a></h3>
-                        <p>Try Playwright lets you execute and share Playwright scripts in your browser to get started with Playwright.</p>
+                        <p>Run and share Playwright scripts in your browser. Built with Go microservices, message queues, and Kubernetes.</p>
                     </div>
                     <div class="card">
                         <h3><a href="http://been.max.sh/" target="_blank" rel="noopener noreferrer">been</a></h3>
-                        <p>My personal travel tracker: an interactive world map and list showing all the countries I've visited. Forkable for anyone to track their own travels.</p>
+                        <p>A personal travel tracker with an interactive world map. Fork it to track your own travels.</p>
                     </div>
                     <div class="card">
                         <h3><a href="https://github.com/microsoft/playwright-dotnet" target="_blank" rel="noopener noreferrer">playwright-dotnet</a></h3>
-                        <p>2.7k stars on GitHub: .NET version of the Playwright testing and automation library for C# and other .NET languages.</p>
+                        <p>Developed and maintained Playwright's .NET bindings for C# and other .NET languages.</p>
                     </div>
                     <div class="card">
                         <h3><a href="https://github.com/mxschmitt/pg-backup-scheduler" target="_blank" rel="noopener noreferrer">pg-backup-scheduler</a></h3>
-                        <p>Self-hosted PostgreSQL backup scheduler with Docker-based version matching. Perfect for Supabase users avoiding premium backup costs. Built with Go - single binary, no dependencies beyond Docker.</p>
+                        <p>A self-hosted PostgreSQL backup scheduler built in Go, with Docker-based version matching. One binary; Docker is the only dependency.</p>
                     </div>
                     <div class="card">
                         <h3><a href="https://runningfomo.com/" target="_blank" rel="noopener noreferrer">Running FOMO</a></h3>
-                        <p>I'm responsible for this website: Berlin's go-to platform to discover running events and run clubs, plus our own branded Running FOMO events. Migrated from a Google Sheet to PostgreSQL, with a stateless cron worker scraping Strava, Heylo, Meetup and more.</p>
+                        <p>Built a platform for Berlin running events and clubs, with PostgreSQL and automated event collection from Strava, Heylo, Meetup, and more.</p>
                     </div>
                 </div>
             </div>
@@ -589,7 +597,7 @@
                 <div class="grid">
                     <div class="card">
                         <h3><a href="https://dev.to/playwright/implementing-microsoft-entra-certificate-based-authentication-with-playwright-4lbc" target="_blank" rel="noopener noreferrer">Implementing Microsoft Entra Certificate-Based Authentication with Playwright</a></h3>
-                        <p>A comprehensive guide on implementing certificate-based authentication with Playwright for Microsoft Entra, covering phishing-resistant and passwordless authentication methods.</p>
+                        <p>How to use Playwright with Microsoft Entra certificate-based authentication for passwordless, phishing-resistant sign-in.</p>
                     </div>
                 </div>
             </div>
